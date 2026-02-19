@@ -295,14 +295,17 @@ end
 -- FRAME CREATION
 -- ==================================================
 
+-- Modbus PDU uses 0-based addresses; many device manuals use 1-based register numbers.
+-- So we send (register - 1) as the 16-bit address in the frame.
 function ModbusClient:createBlockReadFrame(startReg, count)
 	local id = self.readId
 	self.readId = (id % 10000) + 1
 
 	local frame_id = string.char(id >> 8, id & 0xFF)
 
-	local addr_hi = startReg >> 8
-	local addr_lo = (startReg & 0xFF) - 1
+	local addr = startReg - 1
+	local addr_hi = addr >> 8
+	local addr_lo = addr & 0xFF
 
 	local size_hi = count >> 8
 	local size_lo = count & 0xFF
@@ -319,12 +322,15 @@ function ModbusClient:createBlockReadFrame(startReg, count)
 end
 
 
+-- Same 1-based → 0-based: send (register - 1) as the address.
 function ModbusClient:createWriteFrame(command, value)
 	local id = self.writeId
 	self.writeId = (id >= 20000) and 10001 or (id + 1)
 
-	local addr_hi = command:byte(1)
-	local addr_lo = command:byte(2) - 1
+	local regAddr = read_unsigned_i16(command)
+	local addr = regAddr - 1
+	local addr_hi = addr >> 8
+	local addr_lo = addr & 0xFF
 
 	local frame_id = string.char(id >> 8, id & 0xFF)
 
