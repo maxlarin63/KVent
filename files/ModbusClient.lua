@@ -287,7 +287,7 @@ function ModbusClient:onData(data)
 		for i, reg in ipairs(req.regs) do
 			local offset = (i - 1) * 2
 			local part = string.sub(payload, offset + 1, offset + 2)
-			reg.on_read_callback(self.qa, part)
+			reg.on_read_callback(self.qa, reg, part)
 		end
 	end
 end

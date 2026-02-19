@@ -64,7 +64,7 @@ local MODE_MAP = {
 
 -- Boolean (0 / 1)
 local function boolRegister(addr, debugName, labelId, textOn, textOff)
-	return makeRegister(addr, function(qa, payload)
+	return makeRegister(addr, function(qa, reg, payload)
 		local raw   = read_unsigned_i16(payload)
 		local state = raw == 1
 		local text  = state and textOn or textOff
@@ -76,31 +76,27 @@ local function boolRegister(addr, debugName, labelId, textOn, textOff)
 end
 
 
--- Integer (now consistent raw logging)
-local function intRegister(addr, debugName, childKey)
-	return makeRegister(addr, function(qa, payload)
+-- Integer (updates child by reg.hex if device exists)
+local function intRegister(addr, debugName)
+	return makeRegister(addr, function(qa, reg, payload)
 		local raw = read_unsigned_i16(payload)
 
 		debugTrace(qa, debugName .. ":", raw, "(raw:", raw .. ")")
 
-		if childKey then
-			qa:updateChildValue(childKey, raw)
-		end
+		qa:updateChildValue(reg, raw)
 	end)
 end
 
 
--- Temperature (signed /10)
-local function tempRegister(addr, debugName, childKey)
-	return makeRegister(addr, function(qa, payload)
+-- Temperature (signed /10, updates child by reg.hex if device exists)
+local function tempRegister(addr, debugName)
+	return makeRegister(addr, function(qa, reg, payload)
 		local raw   = read_signed_i16(payload)
 		local value = raw / 10
 
 		debugTrace(qa, debugName .. ":", value .. " °C", "(raw:", raw .. ")")
 
-		if childKey then
-			qa:updateChildValue(childKey, value)
-		end
+		qa:updateChildValue(reg, value)
 	end)
 end
 
@@ -136,7 +132,7 @@ REGISTERS = {
 	-- Service warning (bitfield → BIT 14)
 	--------------------------------------------------
 
-	service = makeRegister(1007, function(qa, payload)
+	service = makeRegister(1007, function(qa, reg, payload)
 		local raw = read_unsigned_i16(payload)
 
 		-- bit 14 mask (0x4000)
@@ -163,7 +159,7 @@ REGISTERS = {
 		"Manual speed"
 	),
 
-	speed = makeRegister(1101, function(qa, payload)
+	speed = makeRegister(1101, function(qa, reg, payload)
 		local raw = read_unsigned_i16(payload)
 		local speedText = SPEED_MAP[raw] or ("Unknown (" .. raw .. ")")
 
@@ -172,7 +168,7 @@ REGISTERS = {
 		qa:updateLabelSpeed(raw)
 	end),
 
-	current_mode = makeRegister(1102, function(qa, payload)
+	current_mode = makeRegister(1102, function(qa, reg, payload)
 		local raw = read_unsigned_i16(payload)
 		local modeText = MODE_MAP[raw] or ("Unknown (" .. raw .. ")")
 
