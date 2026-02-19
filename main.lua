@@ -1,14 +1,4 @@
 -- ==================================================
--- Mode lookup (UI only)
--- ==================================================
-
-local MODE_MAP = {
-	"Manual",
-	"Auto"
-}
-
-
--- ==================================================
 -- QuickApp Init
 -- ==================================================
 
@@ -201,11 +191,6 @@ end
 
 
 function QuickApp:updateLabelMode(state)
-	local mode = MODE_MAP[state + 1]
-
-	if mode then
-		self:updateView("label_mode", "text", "Mode " .. mode)
-	else
-		self:updateView("label_mode", "text", "Unknown mode")
-	end
+	local mode = MODE_MAP[state] or ("Unknown (" .. tostring(state) .. ")")
+	self:updateView("label_mode", "text", "Mode " .. mode)
 end

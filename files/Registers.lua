@@ -48,7 +48,8 @@ local SPEED_MAP = {
 	[4] = "Boost"
 }
 
-local MODE_MAP = {
+-- Shared with main.lua (UI labels)
+MODE_MAP = {
 	[0] = "Manual",
 	[1] = "Auto"
 }
