@@ -63,7 +63,7 @@ function setup_sensor(qa, registry, type, name, unit)
 		qa:trace(child.name, " created: ", child.id)
 		child:setVariable("registry_uid", uid)
 
-		if(unit ~= nil or unit ~= "") then
+		if unit and unit ~= "" then
 			child:updateProperty("unit", unit)
 		end
 	end)
