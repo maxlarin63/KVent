@@ -1,0 +1,1154 @@
+{
+  "name": "KVent",
+  "type": "com.fibaro.deviceController",
+  "apiVersion": "1.3",
+  "initialProperties": {
+    "viewLayout": {
+      "$jason": {
+        "body": {
+          "header": {
+            "style": {
+              "height": "0"
+            },
+            "title": "quickApp_device_71"
+          },
+          "sections": {
+            "items": [
+              {
+                "components": [
+                  {
+                    "name": "label_power",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Power",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "btn_power_on",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Power ON",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "btn_power_off",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Power OFF",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "label_mode",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Mode",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "btn_auto_on",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Auto",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "btn_auto_off",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Manual",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "label_season",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "SEASON",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "btn_season_winter",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Winter",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "btn_season_summer",
+                        "style": {
+                          "weight": "0.50"
+                        },
+                        "text": "Summer",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "label_speed",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Speed",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "components": [
+                      {
+                        "name": "button_speed_1",
+                        "style": {
+                          "weight": "0.33"
+                        },
+                        "text": "Speed 1",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "button_speed_2",
+                        "style": {
+                          "weight": "0.33"
+                        },
+                        "text": "Speed 2",
+                        "type": "button",
+                        "visible": true
+                      },
+                      {
+                        "name": "button_speed_3",
+                        "style": {
+                          "weight": "0.33"
+                        },
+                        "text": "Speed 3",
+                        "type": "button",
+                        "visible": true
+                      }
+                    ],
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "type": "horizontal"
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "label_service",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Service",
+                    "type": "label",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              },
+              {
+                "components": [
+                  {
+                    "name": "btn_sync_devices",
+                    "style": {
+                      "weight": "1.2"
+                    },
+                    "text": "Sync Devices",
+                    "type": "button",
+                    "visible": true
+                  },
+                  {
+                    "style": {
+                      "weight": "0.5"
+                    },
+                    "type": "space"
+                  }
+                ],
+                "style": {
+                  "weight": "1.2"
+                },
+                "type": "vertical"
+              }
+            ]
+          }
+        },
+        "head": {
+          "title": "quickApp_device_71"
+        }
+      }
+    },
+    "uiView": [
+      {
+        "components": [
+          {
+            "name": "label_power",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Power",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_power_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_power_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_power_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_power_on",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Power ON",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_power_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_power_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_power_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_power_off",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Power OFF",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "name": "label_mode",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Mode",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_auto_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_auto_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_auto_on"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_auto_on",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Auto",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_auto_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_auto_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_auto_off"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_auto_off",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Manual",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "name": "label_season",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "SEASON",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_season_winter"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_season_winter"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_season_winter"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_season_winter",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Winter",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_season_summer"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_season_summer"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_season_summer"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_season_summer",
+            "style": {
+              "weight": "0.50"
+            },
+            "text": "Summer",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "name": "label_speed",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Speed",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "button_speed_1"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "button_speed_1"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "button_speed_1"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "button_speed_1",
+            "style": {
+              "weight": "0.33"
+            },
+            "text": "Speed 1",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "button_speed_2"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "button_speed_2"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "button_speed_2"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "button_speed_2",
+            "style": {
+              "weight": "0.33"
+            },
+            "text": "Speed 2",
+            "type": "button",
+            "visible": true
+          },
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "button_speed_3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "button_speed_3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "button_speed_3"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "button_speed_3",
+            "style": {
+              "weight": "0.33"
+            },
+            "text": "Speed 3",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "name": "label_service",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Service",
+            "type": "label",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      },
+      {
+        "components": [
+          {
+            "eventBinding": {
+              "onLongPressDown": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressDown",
+                      "btn_sync_devices"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onLongPressReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onLongPressReleased",
+                      "btn_sync_devices"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ],
+              "onReleased": [
+                {
+                  "params": {
+                    "actionName": "UIAction",
+                    "args": [
+                      "onReleased",
+                      "btn_sync_devices"
+                    ]
+                  },
+                  "type": "deviceAction"
+                }
+              ]
+            },
+            "name": "btn_sync_devices",
+            "style": {
+              "weight": "1.0"
+            },
+            "text": "Sync Devices",
+            "type": "button",
+            "visible": true
+          }
+        ],
+        "style": {
+          "weight": "1.0"
+        },
+        "type": "horizontal"
+      }
+    ],
+    "useUiView": true,
+    "uiCallbacks": [
+      {
+        "callback": "onPowerOnSelected",
+        "eventType": "onReleased",
+        "name": "btn_power_on"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_power_on"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_power_on"
+      },
+      {
+        "callback": "onPowerOffSelected",
+        "eventType": "onReleased",
+        "name": "btn_power_off"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_power_off"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_power_off"
+      },
+      {
+        "callback": "onAutoOnSelected",
+        "eventType": "onReleased",
+        "name": "btn_auto_on"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_auto_on"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_auto_on"
+      },
+      {
+        "callback": "onAutoOffSelected",
+        "eventType": "onReleased",
+        "name": "btn_auto_off"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_auto_off"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_auto_off"
+      },
+      {
+        "callback": "onWinterSelected",
+        "eventType": "onReleased",
+        "name": "btn_season_winter"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_season_winter"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_season_winter"
+      },
+      {
+        "callback": "onSummerSelected",
+        "eventType": "onReleased",
+        "name": "btn_season_summer"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_season_summer"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_season_summer"
+      },
+      {
+        "callback": "onSpeed1Selected",
+        "eventType": "onReleased",
+        "name": "button_speed_1"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "button_speed_1"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "button_speed_1"
+      },
+      {
+        "callback": "onSpeed2Selected",
+        "eventType": "onReleased",
+        "name": "button_speed_2"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "button_speed_2"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "button_speed_2"
+      },
+      {
+        "callback": "onSpeed3Selected",
+        "eventType": "onReleased",
+        "name": "button_speed_3"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "button_speed_3"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "button_speed_3"
+      },
+      {
+        "callback": "onDeviceSyncRequested",
+        "eventType": "onReleased",
+        "name": "btn_sync_devices"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressDown",
+        "name": "btn_sync_devices"
+      },
+      {
+        "callback": "",
+        "eventType": "onLongPressReleased",
+        "name": "btn_sync_devices"
+      }
+    ],
+    "quickAppVariables": [
+      {
+        "name": "device_ip",
+        "type": "string",
+        "value": "10.0.1.3"
+      },
+      {
+        "name": "device_port",
+        "type": "string",
+        "value": "502"
+      }
+    ],
+    "typeTemplateInitialized": true,
+    "userDescription": "Komfovent C4"
+  },
+  "initialInterfaces": [],
+  "files": [
+    {
+      "name": "main",
+      "isMain": true,
+      "isOpen": true,
+      "content": "-- ==================================================\n-- Mode lookup (UI only)\n-- ==================================================\n\nlocal MODE_MAP = {\n    \"Manual\",\n    \"Auto\"\n}\n\n\n-- ==================================================\n-- QuickApp Init\n-- ==================================================\n\nfunction QuickApp:onInit()\n    __TAG = \"QA_KOMFOVENT_C4_\" .. plugin.mainDeviceId\n\n    self:debug(\"QuickApp:onInit\")\n\n    -- --------------------------------------------------\n    -- Child device classes\n    -- --------------------------------------------------\n\n    self:initChildDevices({\n        [\"com.fibaro.binarySwitch\"]        = KomfoBinarySwitch,\n        [\"com.fibaro.temperatureSensor\"]   = KomfoSensor,\n        [\"com.fibaro.humiditySensor\"]      = KomfoSensor,\n        [\"com.fibaro.powerSensor\"]         = KomfoSensor,\n        [\"com.fibaro.multilevelSensor\"]    = KomfoSensor,\n        [\"com.fibaro.powerMeter\"]          = KomfoSensor\n    })\n\n    self:setupDevicesMap()\n\n    -- --------------------------------------------------\n    -- Modbus connection\n    -- --------------------------------------------------\n\n    local ip   = self:getVariable(\"device_ip\")\n    local port = self:getVariable(\"device_port\")\n\n    if not ip or ip == \"\" then\n        self:error(\"Device IP is not set\")\n        return\n    end\n\n    self.modbus = ModbusClient(self, ip, port)\n\n    self.modbus:connect(function()\n        self:queueReadRegisters()\n    end)\nend\n\n\n-- ==================================================\n-- Device Mapping\n-- ==================================================\n\nfunction QuickApp:setupDevicesMap()\n    self.devicesMap = {}\n\n    for hcId, device in pairs(self.childDevices) do\n        self.devicesMap[device.uid] = hcId\n    end\nend\n\n\n-- ==================================================\n-- Register Polling Loop\n-- ==================================================\n\nfunction QuickApp:queueReadRegisters()\n    fibaro.setTimeout(15000, function()\n\n        if self.modbus and self.modbus:hasProcessedAll() then\n            for _, reg in pairs(REGISTERS) do\n                self.modbus:queueRead(reg)\n            end\n        end\n\n        self:queueReadRegisters()\n\n    end)\nend\n\n\n-- ==================================================\n-- Child Helpers\n-- ==================================================\n\nfunction QuickApp:createChildIfNotExists(registry, createCallback)\n    local uid = convert_hex(registry.id)\n\n    if not self.devicesMap[uid] then\n        createCallback(uid)\n    end\nend\n\n\nfunction QuickApp:updateChildValue(registry, value)\n    self:updateChildProperty(registry, \"value\", value)\nend\n\n\nfunction QuickApp:updateChildPower(registry, value)\n    self:updateChildProperty(registry, \"power\", value)\nend\n\n\nfunction QuickApp:updateChildProperty(registry, property, value)\n    local hcId = self.devicesMap[registry.hex]\n    if not hcId then return end\n\n    local device = self.childDevices[hcId]\n    if device then\n        device:updateProperty(property, value)\n    end\nend\n\n\n-- ==================================================\n-- Buttons\n-- ==================================================\n\nfunction QuickApp:onDeviceSyncRequested()\n    self:trace(\"Creating device tree\")\n    setup_devices(self)\n    self:setupDevicesMap()\nend\n\n\n-- --- Power ------------------------------------------------\n\nfunction QuickApp:onPowerOnSelected()\n    self:debug(\"Set Power ON\")\n    self.modbus:queueWrite(REGISTERS.status, string.char(0x00, 0x01))\nend\n\nfunction QuickApp:onPowerOffSelected()\n    self:debug(\"Set Power OFF\")\n    self.modbus:queueWrite(REGISTERS.status, string.char(0x00, 0x00))\nend\n\n\n-- --- Season -----------------------------------------------\n\nfunction QuickApp:onWinterSelected()\n    self:debug(\"Set Winter\")\n    self.modbus:queueWrite(REGISTERS.season, string.char(0x00, 0x01))\nend\n\nfunction QuickApp:onSummerSelected()\n    self:debug(\"Set Summer\")\n    self.modbus:queueWrite(REGISTERS.season, string.char(0x00, 0x00))\nend\n\n\n-- --- Mode -------------------------------------------------\n\nfunction QuickApp:onAutoOnSelected()\n    self:debug(\"Set Auto\")\n    self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x01))\nend\n\nfunction QuickApp:onAutoOffSelected()\n    self:debug(\"Set Manual\")\n    self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x00))\nend\n\n\n-- --- Manual Speed -----------------------------------------\n\nlocal function setManualSpeed(self, level)\n    self:debug(\"Set speed \" .. level)\n    self.modbus:queueWrite(REGISTERS.speed_manual, string.char(0x00, level))\nend\n\nfunction QuickApp:onSpeed1Selected() setManualSpeed(self, 1) end\nfunction QuickApp:onSpeed2Selected() setManualSpeed(self, 2) end\nfunction QuickApp:onSpeed3Selected() setManualSpeed(self, 3) end\n\n\n-- ==================================================\n-- UI Labels\n-- ==================================================\n\nfunction QuickApp:updateLabelState(label, state, textOn, textOff)\n    self:updateView(label, \"text\", state and textOn or textOff)\nend\n\n\nfunction QuickApp:updateLabelSpeed(state)\n    if state and state > 0 then\n        self:updateView(\"label_speed\", \"text\", \"Speed \" .. state)\n    else\n        self:updateView(\"label_speed\", \"text\", \"Speed Unknown\")\n    end\nend\n\n\nfunction QuickApp:updateLabelMode(state)\n    local mode = MODE_MAP[state + 1]\n\n    if mode then\n        self:updateView(\"label_mode\", \"text\", \"Mode \" .. mode)\n    else\n        self:updateView(\"label_mode\", \"text\", \"Unknown mode\")\n    end\nend\n"
+    },
+    {
+      "name": "ModbusClient",
+      "isMain": false,
+      "isOpen": true,
+      "content": "class 'ModbusClient'\r\n\r\n-- ==================================================\r\n-- CONFIG\r\n-- ==================================================\r\n\r\nlocal DEBUG = false   -- <<< set false in production\r\n\r\nlocal DEFAULT_PORT         = \"502\"\r\nlocal RECONNECTION_TIMEOUT = 5000\r\nlocal REQUEST_TIMEOUT      = 2000\r\nlocal MAX_BLOCK_SIZE       = 20\r\n\r\nlocal NODE_ID     = string.char(0x01)\r\nlocal PROTOCOL_ID = string.char(0x00, 0x00)\r\nlocal READ_FUNC   = string.char(0x03)\r\nlocal WRITE_FUNC  = string.char(0x06)\r\n\r\nlocal function debugLog(qa, ...)\r\n    if DEBUG then\r\n        qa:debug(...)\r\n    end\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- INIT\r\n-- ==================================================\r\n\r\nfunction ModbusClient:__init(qa, ip, port)\r\n    self.qa   = qa\r\n    self.ip   = ip\r\n    self.port = (port and port ~= \"\") and port or DEFAULT_PORT\r\n\r\n    self.sock        = nil\r\n    self.connected   = false\r\n    self.isProcessing = false\r\n\r\n    self.readQueue   = {}\r\n    self.writeQueue  = Queue()\r\n    self.requests    = {}\r\n\r\n    self.readId  = 1\r\n    self.writeId = 10001\r\n\r\n    debugLog(self.qa, \"ModbusClient init\", self.ip, self.port)\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- CONNECTION\r\n-- ==================================================\r\n\r\nfunction ModbusClient:connect(on_ready)\r\n    self.onConnected = on_ready\r\n\r\n    self.sock = net.TCPSocket({ timeout = 10000 })\r\n\r\n    self.sock:connect(self.ip, tonumber(self.port), {\r\n        success = function()\r\n            self.connected = true\r\n            self.qa:trace(\"Modbus connected\")\r\n\r\n            if self.onConnected then\r\n                self.onConnected()\r\n            end\r\n\r\n            self:pump()\r\n        end,\r\n\r\n        error = function(err)\r\n            self:handleDisconnect(\"Connect error: \" .. tostring(err))\r\n        end\r\n    })\r\nend\r\n\r\n\r\nfunction ModbusClient:handleDisconnect(msg)\r\n    self.connected = false\r\n    self.isProcessing = false\r\n\r\n    if self.sock then\r\n        self.sock:close()\r\n    end\r\n\r\n    self.qa:warning(msg)\r\n\r\n    fibaro.setTimeout(RECONNECTION_TIMEOUT, function()\r\n        self:connect(self.onConnected)\r\n    end)\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- PUBLIC API\r\n-- ==================================================\r\n\r\nfunction ModbusClient:queueRead(registry)\r\n    table.insert(self.readQueue, registry)\r\n\r\n    local addr = read_unsigned_i16(registry.id)\r\n    debugLog(self.qa, \"Queue read register:\", addr)\r\n\r\n    self:pump()\r\nend\r\n\r\n\r\nfunction ModbusClient:queueWrite(registry, value)\r\n    local id, frame = self:createWriteFrame(registry.id, value)\r\n\r\n    self.writeQueue:push({\r\n        id = id,\r\n        frame = frame\r\n    })\r\n\r\n    debugLog(self.qa,\r\n        \"Queue write id:\", id,\r\n        \"frame:\", convert_hex(frame)\r\n    )\r\n\r\n    self:pump()\r\nend\r\n\r\n\r\nfunction ModbusClient:hasProcessedAll()\r\n    return #self.readQueue == 0\r\n       and self.writeQueue:isEmpty()\r\n       and not self.isProcessing\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- SEND PUMP\r\n-- ==================================================\r\n\r\nfunction ModbusClient:pump()\r\n    if not self.connected or self.isProcessing then\r\n        return\r\n    end\r\n\r\n    -- writes first\r\n    if not self.writeQueue:isEmpty() then\r\n        local item = self.writeQueue:pop()\r\n\r\n        debugLog(self.qa,\r\n            \"Send write id:\", item.id,\r\n            \"frame:\", convert_hex(item.frame)\r\n        )\r\n\r\n        self:sendFrame(item)\r\n        return\r\n    end\r\n\r\n    if #self.readQueue > 0 then\r\n        self:sendReadBlock()\r\n    end\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- CONTIGUOUS BLOCK READ\r\n-- ==================================================\r\n\r\nfunction ModbusClient:sendReadBlock()\r\n\r\n    table.sort(self.readQueue, function(a, b)\r\n        return read_unsigned_i16(a.id) < read_unsigned_i16(b.id)\r\n    end)\r\n\r\n    local block = {}\r\n    local startReg\r\n    local count = 0\r\n\r\n    for _, reg in ipairs(self.readQueue) do\r\n        local addr = read_unsigned_i16(reg.id)\r\n\r\n        if not startReg then\r\n            startReg = addr\r\n            block[#block + 1] = reg\r\n            count = 1\r\n        else\r\n            local expected = startReg + count\r\n\r\n            if addr == expected and count < MAX_BLOCK_SIZE then\r\n                block[#block + 1] = reg\r\n                count = count + 1\r\n            else\r\n                break\r\n            end\r\n        end\r\n    end\r\n\r\n    for i = 1, #block do\r\n        table.remove(self.readQueue, 1)\r\n    end\r\n\r\n    local id, frame = self:createBlockReadFrame(startReg, count)\r\n\r\n    self.requests[id] = {\r\n        type = \"read_block\",\r\n        regs = block\r\n    }\r\n\r\n    debugLog(self.qa,\r\n        \"Send read block id:\", id,\r\n        \"start:\", startReg,\r\n        \"count:\", count,\r\n        \"frame:\", convert_hex(frame)\r\n    )\r\n\r\n    self:sendFrame({ id = id, frame = frame })\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- FRAME SEND\r\n-- ==================================================\r\n\r\nfunction ModbusClient:sendFrame(item)\r\n    self.isProcessing = true\r\n\r\n    self.sock:write(item.frame, {\r\n        success = function()\r\n            self:startTimeout(item.id)\r\n            self:waitForResponse()\r\n        end,\r\n\r\n        error = function(err)\r\n            self.isProcessing = false\r\n            self:handleDisconnect(\"Write error: \" .. tostring(err))\r\n        end\r\n    })\r\nend\r\n\r\n\r\nfunction ModbusClient:startTimeout(id)\r\n    fibaro.setTimeout(REQUEST_TIMEOUT, function()\r\n        if self.requests[id] then\r\n            self.qa:warning(\"Request timeout id:\", id)\r\n            self.requests[id] = nil\r\n            self.isProcessing = false\r\n            self:pump()\r\n        end\r\n    end)\r\nend\r\n\r\n\r\nfunction ModbusClient:waitForResponse()\r\n    self.sock:read({\r\n        success = function(data)\r\n            self.isProcessing = false\r\n            self:onData(data)\r\n            self:pump()\r\n        end,\r\n\r\n        error = function(err)\r\n            self.isProcessing = false\r\n            self:handleDisconnect(\"Read error: \" .. tostring(err))\r\n        end\r\n    })\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- RESPONSE HANDLING\r\n-- ==================================================\r\n\r\nfunction ModbusClient:onData(data)\r\n    local id = read_unsigned_i16(string.sub(data, 1, 2))\r\n    local function_id = string.byte(data, 8)\r\n\r\n    debugLog(self.qa,\r\n        \"Received id:\", id,\r\n        \"frame:\", convert_hex(data)\r\n    )\r\n\r\n    local req = self.requests[id]\r\n    self.requests[id] = nil\r\n\r\n    if not req then\r\n        return\r\n    end\r\n\r\n    if req.type == \"read_block\" then\r\n        local payload = string.sub(data, 10)\r\n\r\n        for i, reg in ipairs(req.regs) do\r\n            local offset = (i - 1) * 2\r\n            local part = string.sub(payload, offset + 1, offset + 2)\r\n            reg.on_read_callback(self.qa, part)\r\n        end\r\n    end\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- FRAME CREATION\r\n-- ==================================================\r\n\r\nfunction ModbusClient:createBlockReadFrame(startReg, count)\r\n    local id = self.readId\r\n    self.readId = (id % 10000) + 1\r\n\r\n    local frame_id = string.char(id >> 8, id & 0xFF)\r\n\r\n    local addr_hi = startReg >> 8\r\n    local addr_lo = (startReg & 0xFF) - 1\r\n\r\n    local size_hi = count >> 8\r\n    local size_lo = count & 0xFF\r\n\r\n    local frame = frame_id\r\n               .. PROTOCOL_ID\r\n               .. string.char(0x00, 0x06)\r\n               .. NODE_ID\r\n               .. READ_FUNC\r\n               .. string.char(addr_hi, addr_lo)\r\n               .. string.char(size_hi, size_lo)\r\n\r\n    return id, frame\r\nend\r\n\r\n\r\nfunction ModbusClient:createWriteFrame(command, value)\r\n    local id = self.writeId\r\n    self.writeId = (id >= 20000) and 10001 or (id + 1)\r\n\r\n    local addr_hi = command:byte(1)\r\n    local addr_lo = command:byte(2) - 1\r\n\r\n    local frame_id = string.char(id >> 8, id & 0xFF)\r\n\r\n    local frame = frame_id\r\n               .. PROTOCOL_ID\r\n               .. string.char(0x00, 0x06)\r\n               .. NODE_ID\r\n               .. WRITE_FUNC\r\n               .. string.char(addr_hi, addr_lo)\r\n               .. value\r\n\r\n    return id, frame\r\nend\r\n"
+    },
+    {
+      "name": "Registers",
+      "isMain": false,
+      "isOpen": false,
+      "content": "-- ==================================================\r\n-- Registers.lua\r\n-- Clean + optimized + DEBUG-controlled trace\r\n-- ==================================================\r\n\r\n\r\n-- ==================================================\r\n-- Global Debug Switch\r\n-- ==================================================\r\n\r\nlocal DEBUG = true   -- <<< set to false in production\r\n\r\n\r\n-- Debug wrapper (controls only register logs)\r\nlocal function debugTrace(qa, ...)\r\n    if DEBUG then\r\n        qa:trace(...)\r\n    end\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- Helpers\r\n-- ==================================================\r\n\r\nlocal function regId(addr)\r\n    return string.char(addr >> 8, addr & 0xFF)\r\nend\r\n\r\nlocal function regHex(addr)\r\n    return string.format(\"%04x\", addr)\r\nend\r\n\r\nlocal function makeRegister(addr, callback)\r\n    return {\r\n        id = regId(addr),\r\n        hex = regHex(addr),\r\n        on_read_callback = callback\r\n    }\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- Lookup Tables (defined once)\r\n-- ==================================================\r\n\r\nlocal SPEED_MAP = {\r\n    [0] = \"Standby\",\r\n    [1] = \"Level 1\",\r\n    [2] = \"Level 2\",\r\n    [3] = \"Level 3\",\r\n    [4] = \"Boost\"\r\n}\r\n\r\nlocal MODE_MAP = {\r\n    [0] = \"Manual\",\r\n    [1] = \"Auto\"\r\n}\r\n\r\n\r\n-- ==================================================\r\n-- Register Type Helpers\r\n-- ==================================================\r\n\r\n-- Boolean (0 / 1)\r\nlocal function boolRegister(addr, debugName, labelId, textOn, textOff)\r\n    return makeRegister(addr, function(qa, payload)\r\n        local raw   = read_unsigned_i16(payload)\r\n        local state = raw == 1\r\n        local text  = state and textOn or textOff\r\n\r\n        debugTrace(qa, debugName .. \":\", text, \"(raw:\", raw .. \")\")\r\n\r\n        qa:updateLabelState(labelId, state, textOn, textOff)\r\n    end)\r\nend\r\n\r\n\r\n-- Integer (now consistent raw logging)\r\nlocal function intRegister(addr, debugName, childKey)\r\n    return makeRegister(addr, function(qa, payload)\r\n        local raw = read_unsigned_i16(payload)\r\n\r\n        debugTrace(qa, debugName .. \":\", raw, \"(raw:\", raw .. \")\")\r\n\r\n        if childKey then\r\n            qa:updateChildValue(childKey, raw)\r\n        end\r\n    end)\r\nend\r\n\r\n\r\n-- Temperature (signed /10)\r\nlocal function tempRegister(addr, debugName, childKey)\r\n    return makeRegister(addr, function(qa, payload)\r\n        local raw   = read_signed_i16(payload)\r\n        local value = raw / 10\r\n\r\n        debugTrace(qa, debugName .. \":\", value .. \" °C\", \"(raw:\", raw .. \")\")\r\n\r\n        if childKey then\r\n            qa:updateChildValue(childKey, value)\r\n        end\r\n    end)\r\nend\r\n\r\n\r\n-- ==================================================\r\n-- REGISTERS\r\n-- ==================================================\r\n\r\nREGISTERS = {\r\n\r\n    --------------------------------------------------\r\n    -- Power / Season\r\n    --------------------------------------------------\r\n\r\n    status = boolRegister(\r\n        1000,\r\n        \"Power\",\r\n        \"label_power\",\r\n        \"Power ON\",\r\n        \"Power OFF\"\r\n    ),\r\n\r\n    season = boolRegister(\r\n        1001,\r\n        \"Season\",\r\n        \"label_season\",\r\n        \"Winter\",\r\n        \"Summer\"\r\n    ),\r\n\r\n\r\n    --------------------------------------------------\r\n    -- Service warning (bitfield → BIT 14)\r\n    --------------------------------------------------\r\n\r\n    service = makeRegister(1007, function(qa, payload)\r\n        local raw = read_unsigned_i16(payload)\r\n\r\n        -- bit 14 mask (0x4000)\r\n        local serviceActive = (raw & 0x4000) ~= 0\r\n        local text = serviceActive and \"Service NOW\" or \"Service OK\"\r\n\r\n        debugTrace(qa, \"Service:\", text, \"(raw:\", raw .. \")\")\r\n\r\n        qa:updateLabelState(\r\n            \"label_service\",\r\n            serviceActive,\r\n            \"Service NOW\",\r\n            \"Service OK\"\r\n        )\r\n    end),\r\n\r\n\r\n    --------------------------------------------------\r\n    -- Ventilation\r\n    --------------------------------------------------\r\n\r\n    speed_manual = intRegister(\r\n        1100,\r\n        \"Manual speed\"\r\n    ),\r\n\r\n    speed = makeRegister(1101, function(qa, payload)\r\n        local raw = read_unsigned_i16(payload)\r\n        local speedText = SPEED_MAP[raw] or (\"Unknown (\" .. raw .. \")\")\r\n\r\n        debugTrace(qa, \"Current speed:\", speedText, \"(raw:\", raw .. \")\")\r\n\r\n        qa:updateLabelSpeed(raw)\r\n    end),\r\n\r\n    current_mode = makeRegister(1102, function(qa, payload)\r\n        local raw = read_unsigned_i16(payload)\r\n        local modeText = MODE_MAP[raw] or (\"Unknown (\" .. raw .. \")\")\r\n\r\n        debugTrace(qa, \"Mode:\", modeText, \"(raw:\", raw .. \")\")\r\n\r\n        qa:updateLabelMode(raw)\r\n    end),\r\n\r\n\r\n    --------------------------------------------------\r\n    -- Temperatures\r\n    --------------------------------------------------\r\n\r\n    supply_temp = tempRegister(\r\n        1200,\r\n        \"Supply temperature\"\r\n    ),\r\n\r\n    setpoint = tempRegister(\r\n        1201,\r\n        \"Setpoint temperature\"\r\n    ),\r\n}\r\n"
+    },
+    {
+      "name": "utils",
+      "isMain": false,
+      "isOpen": true,
+      "content": "function read_unsigned_i16(payload)\r\n    return (payload:byte() << 8) | payload:byte(2)\r\nend\r\n\r\nfunction read_unsigned_i32(payload)\r\n    return (payload:byte() << 24) | (payload:byte(2) << 16) | (payload:byte(3) << 8) | payload:byte(4)\r\nend\r\n\r\nfunction read_signed_i16(payload)\r\n  local b1 = payload:byte()\r\n  local b2 = payload:byte(2)\r\n  \r\n  local mask = (1 << 15)\r\n  local res  = (b1 << 8) | (b2 << 0)\r\n  return (res ~ mask) - mask\r\nend\r\n\r\nfunction convert_hex(str)\r\n    local len = string.len(str)\r\n    local hex = \"\"\r\n\r\n    for i = 1, len do\r\n        local ord = string.byte(str, i)\r\n        hex = hex .. string.format(\"%02x\", ord)\r\n    end\r\n\r\n    return hex\r\nend\r\n"
+    },
+    {
+      "name": "Queue",
+      "isMain": false,
+      "isOpen": true,
+      "content": "class 'Queue'\r\n\r\nfunction Queue:__init() \r\n    self.first = 0\r\n    self.last = -1\r\nend\r\n\r\nfunction Queue:push(value)\r\n    local first = self.first - 1\r\n    self.first = first\r\n    self[first] = value\r\nend\r\n\r\nfunction Queue:pop ()\r\n  local last = self.last\r\n  if self.first > last then \r\n    error(\"list is empty\") \r\n  end\r\n  \r\n  local value = self[last]\r\n  self[last] = nil         -- to allow garbage collection\r\n  self.last = last - 1\r\n  \r\n  return value\r\nend\r\n\r\nfunction Queue:isEmpty()\r\n    return self.first > self.last\r\nend"
+    },
+    {
+      "name": "setup",
+      "isMain": false,
+      "isOpen": true,
+      "content": "function setup_devices(qa)\r\n    local child = nil\r\n    \r\n    -- [[ Switches ]]\r\n\r\n    -- Create Switch for Power status\r\n    setup_switch(qa, REGISTERS.status, \"Komfovent Power Switch\")\r\n\r\n    -- Create Switch for Season status\r\n    setup_switch(qa, REGISTERS.season, \"Komfovent Winter Switch\")\r\n\r\n    -- Create Switch for Auto mode switch\r\n    setup_switch(qa, REGISTERS.current_mode, \"Komfovent Auto Mode Switch\")\r\n\r\n    -- [[ Temp sensors ]]\r\n\r\n    -- Create Supply Temp sensor\r\n    setup_temp_sensor(qa, REGISTERS.supply_temp, \"Komfovent Supply Temp\")\r\n\r\n    -- Create Setpoint Temp sensor\r\n    setup_temp_sensor(qa, REGISTERS.setpoint, \"Komfovent Setpoint Temp\")\r\nend\r\n\r\nfunction setup_switch(qa, registry, name)\r\n    qa:createChildIfNotExists(registry, function(uid) \r\n        child = qa:createChildDevice({\r\n            name = name,\r\n            type = \"com.fibaro.binarySwitch\",\r\n        }, KomfoBinarySwitch)\r\n\r\n        qa:trace(child.name, \" created: \", child.id)\r\n        child:setVariable(\"registry_uid\", uid)\r\n    end)\r\nend\r\n\r\nfunction setup_temp_sensor(qa, registry, name)\r\n    setup_sensor(qa, registry, \"com.fibaro.temperatureSensor\", name)\r\nend\r\n\r\nfunction setup_humidity_sensor(qa, registry, name) \r\n    setup_sensor(qa, registry, \"com.fibaro.humiditySensor\", name)\r\nend\r\n\r\nfunction setup_power_sensor(qa, registry, name)\r\n    setup_sensor(qa, registry, \"com.fibaro.powerSensor\", name)\r\nend\r\n\r\nfunction setup_power_meter(qa, registry, name)\r\n    setup_sensor(qa, registry, \"com.fibaro.powerMeter\", name)\r\nend\r\n\r\nfunction setup_custom_sensor(qa, registry, name, unit)\r\n    setup_sensor(qa, registry, \"com.fibaro.multilevelSensor\", name, unit)\r\nend\r\n\r\nfunction setup_sensor(qa, registry, type, name, unit)\r\n    qa:createChildIfNotExists(registry, function(uid) \r\n        child = qa:createChildDevice({\r\n            name = name,\r\n            type = type,\r\n        }, KomfoSensor)\r\n\r\n        qa:trace(child.name, \" created: \", child.id)\r\n        child:setVariable(\"registry_uid\", uid)\r\n\r\n        if(unit ~= nil or unit ~= \"\") then\r\n            child:updateProperty(\"unit\", unit)\r\n        end\r\n    end)\r\nend"
+    },
+    {
+      "name": "KomfoChild",
+      "isMain": false,
+      "isOpen": false,
+      "content": "class 'KomfoChild' (QuickAppChild)\r\n\r\nfunction KomfoChild:__init(device)\r\n    QuickAppChild.__init(self, device) \r\n\r\n    self.uid = self:getVariable(\"registry_uid\")\r\nend"
+    },
+    {
+      "name": "KomfoBinarySwitch",
+      "isMain": false,
+      "isOpen": false,
+      "content": "class 'KomfoBinarySwitch' (KomfoChild)\r\n\r\nfunction KomfoBinarySwitch:__init(device)\r\n    KomfoChild.__init(self, device) \r\n\r\n    self:debug(\"KomfoBinarySwitch init\", self.uid)\r\nend\r\n\r\nfunction KomfoBinarySwitch:turnOn()\r\n    self:trace(\"KomfoBinarySwitch Turn ON\")\r\n    self.parent.modbus:queueWrite(self.reg, string.char(0x00, 0x01))\r\nend\r\n\r\nfunction KomfoBinarySwitch:turnOff()\r\n    self:trace(\"KomfoBinarySwitch Turn OFF\")\r\n    self.parent.modbus:queueWrite(self.reg, string.char(0x00, 0x00))\r\nend"
+    },
+    {
+      "name": "KomfoSensor",
+      "isMain": false,
+      "isOpen": true,
+      "content": "class 'KomfoSensor' (KomfoChild)\r\n\r\nfunction KomfoSensor:__init(device)\r\n    KomfoChild.__init(self, device) \r\n\r\n    self:debug(\"KomfoSensor init\", self.uid)\r\nend"
+    }
+  ]
+}

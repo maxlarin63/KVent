@@ -1,0 +1,16 @@
+{
+  "_schema": "rootFiles",
+  "_file_map": {
+    "main.lua": "main",
+    "ModbusClient.lua": "ModbusClient",
+    "Registers.lua": "Registers",
+    "utils.lua": "utils",
+    "Queue.lua": "Queue",
+    "setup.lua": "setup",
+    "KomfoChild.lua": "KomfoChild",
+    "KomfoBinarySwitch.lua": "KomfoBinarySwitch",
+    "KomfoSensor.lua": "KomfoSensor"
+  },
+  "_original_newline": "\r\n",
+  "_original_indent": 2
+}
