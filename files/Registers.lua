@@ -5,15 +5,11 @@
 
 
 -- ==================================================
--- Global Debug Switch
+-- Debug (set in main from quickAppVariables.debug)
 -- ==================================================
 
-local DEBUG = true   -- <<< set to false in production
-
-
--- Debug wrapper (controls only register logs)
 local function debugTrace(qa, ...)
-	if DEBUG then
+	if QA_DEBUG then
 		qa:trace(...)
 	end
 end

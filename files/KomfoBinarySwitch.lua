@@ -3,7 +3,7 @@ class 'KomfoBinarySwitch' (KomfoChild)
 function KomfoBinarySwitch:__init(device)
 	KomfoChild.__init(self, device)
 
-	self:debug("KomfoBinarySwitch init", self.uid)
+	self:debug("KomfoBinarySwitch init", tonumber(self.uid, 16) or self.uid)
 end
 
 local function registerByUid(uid)

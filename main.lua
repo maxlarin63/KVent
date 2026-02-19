@@ -33,11 +33,13 @@ function QuickApp:onInit()
 	self:setupDevicesMap()
 
 	-- --------------------------------------------------
-	-- Modbus connection
+	-- QuickApp variables (device_ip, device_port, debug)
 	-- --------------------------------------------------
 
-	local ip   = self:getVariable("device_ip")
-	local port = self:getVariable("device_port")
+	local ip    = self:getVariable("device_ip")
+	local port  = self:getVariable("device_port")
+	local debug = self:getVariable("debug")
+	QA_DEBUG    = (debug == "true" or debug == true or debug == "1")
 
 	if not ip or ip == "" then
 		self:error("Device IP is not set")

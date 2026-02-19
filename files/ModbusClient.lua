@@ -4,8 +4,6 @@ class 'ModbusClient'
 -- CONFIG
 -- ==================================================
 
-local DEBUG = false   -- <<< set false in production
-
 local DEFAULT_PORT         = "502"
 local RECONNECTION_TIMEOUT = 5000
 local REQUEST_TIMEOUT      = 2000
@@ -17,7 +15,7 @@ local READ_FUNC   = string.char(0x03)
 local WRITE_FUNC  = string.char(0x06)
 
 local function debugLog(qa, ...)
-	if DEBUG then
+	if QA_DEBUG then
 		qa:debug(...)
 	end
 end
