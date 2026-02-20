@@ -1089,6 +1089,11 @@
         "name": "device_port",
         "type": "string",
         "value": "502"
+      },
+      {
+        "name": "debug",
+        "type": "string",
+        "value": true
       }
     ],
     "typeTemplateInitialized": true,
