@@ -21,6 +21,7 @@ function KomfoBinarySwitch:turnOn()
 	local reg = registerByUid(self.uid)
 	if reg then
 		self.parent.modbus:queueWrite(reg, string.char(0x00, 0x01))
+		self.parent:updateLabelForRegister(reg, 1)
 	end
 end
 
@@ -29,5 +30,6 @@ function KomfoBinarySwitch:turnOff()
 	local reg = registerByUid(self.uid)
 	if reg then
 		self.parent.modbus:queueWrite(reg, string.char(0x00, 0x00))
+		self.parent:updateLabelForRegister(reg, 0)
 	end
 end

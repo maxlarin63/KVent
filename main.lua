@@ -126,11 +126,13 @@ end
 function QuickApp:onPowerOnSelected()
 	self:debug("Set Power ON")
 	self.modbus:queueWrite(REGISTERS.status, string.char(0x00, 0x01))
+	self:updateLabelForRegister(REGISTERS.status, 1)
 end
 
 function QuickApp:onPowerOffSelected()
 	self:debug("Set Power OFF")
 	self.modbus:queueWrite(REGISTERS.status, string.char(0x00, 0x00))
+	self:updateLabelForRegister(REGISTERS.status, 0)
 end
 
 
@@ -139,11 +141,13 @@ end
 function QuickApp:onWinterSelected()
 	self:debug("Set Winter")
 	self.modbus:queueWrite(REGISTERS.season, string.char(0x00, 0x01))
+	self:updateLabelForRegister(REGISTERS.season, 1)
 end
 
 function QuickApp:onSummerSelected()
 	self:debug("Set Summer")
 	self.modbus:queueWrite(REGISTERS.season, string.char(0x00, 0x00))
+	self:updateLabelForRegister(REGISTERS.season, 0)
 end
 
 
@@ -152,11 +156,13 @@ end
 function QuickApp:onAutoOnSelected()
 	self:debug("Set Auto")
 	self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x01))
+	self:updateLabelForRegister(REGISTERS.current_mode, 1)
 end
 
 function QuickApp:onAutoOffSelected()
 	self:debug("Set Manual")
 	self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x00))
+	self:updateLabelForRegister(REGISTERS.current_mode, 0)
 end
 
 
@@ -165,6 +171,7 @@ end
 local function setManualSpeed(self, level)
 	self:debug("Set speed " .. level)
 	self.modbus:queueWrite(REGISTERS.speed_manual, string.char(0x00, level))
+	self:updateLabelForRegister(REGISTERS.speed_manual, level)
 end
 
 function QuickApp:onSpeed1Selected() setManualSpeed(self, 1) end
@@ -178,6 +185,21 @@ function QuickApp:onSpeed3Selected() setManualSpeed(self, 3) end
 
 function QuickApp:updateLabelState(label, state, textOn, textOff)
 	self:updateView(label, "text", state and textOn or textOff)
+end
+
+
+-- Update the GUI immediately after a register write (optimistic update).
+function QuickApp:updateLabelForRegister(reg, value)
+	if not reg or not reg.hex then return end
+	if reg.hex == REGISTERS.status.hex then
+		self:updateLabelState("label_power", value == 1, "Power ON", "Power OFF")
+	elseif reg.hex == REGISTERS.season.hex then
+		self:updateLabelState("label_season", value == 1, "Winter", "Summer")
+	elseif reg.hex == REGISTERS.current_mode.hex then
+		self:updateLabelMode(value)
+	elseif reg.hex == REGISTERS.speed_manual.hex then
+		self:updateLabelSpeed(value)
+	end
 end
 
 
