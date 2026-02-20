@@ -1093,7 +1093,7 @@
       {
         "name": "debug",
         "type": "string",
-        "value": true
+        "value": "true"
       }
     ],
     "typeTemplateInitialized": true,
