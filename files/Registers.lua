@@ -40,18 +40,19 @@ end
 -- Lookup Tables (defined once)
 -- ==================================================
 
-local SPEED_MAP = {
-	[0] = "Standby",
-	[1] = "Level 1",
-	[2] = "Level 2",
-	[3] = "Level 3",
-	[4] = "Boost"
+-- Shared with main.lua (speed label)
+SPEED_MAP = {
+	[0] = "💤 Standby",
+	[1] = "🌀 Level 1",
+	[2] = "🌀 Level 2",
+	[3] = "🌀 Level 3",
+	[4] = "💨 Boost"
 }
 
 -- Shared with main.lua (UI labels)
 MODE_MAP = {
-	[0] = "Manual",
-	[1] = "Auto"
+	[0] = "🖐️ Manual",
+	[1] = "🤖 Auto"
 }
 
 
@@ -112,16 +113,16 @@ REGISTERS = {
 		1000,
 		"Power",
 		"label_power",
-		"Power ON",
-		"Power OFF"
+		"⚡ Power ON",
+		"⭕ Power OFF"
 	),
 
 	season = boolRegister(
 		1001,
 		"Season",
 		"label_season",
-		"Winter",
-		"Summer"
+		"❄️ Winter",
+		"☀️ Summer"
 	),
 
 
@@ -134,15 +135,15 @@ REGISTERS = {
 
 		-- bit 14 mask (0x4000)
 		local serviceActive = (raw & 0x4000) ~= 0
-		local text = serviceActive and "Service NOW" or "Service OK"
+		local text = serviceActive and "⚠️ Service NOW" or "✅ Service OK"
 
 		debugTrace(qa, "Service:", text, "(raw:", raw .. ")")
 
 		qa:updateLabelState(
 			"label_service",
 			serviceActive,
-			"Service NOW",
-			"Service OK"
+			"⚠️ Service NOW",
+			"✅ Service OK"
 		)
 	end),
 

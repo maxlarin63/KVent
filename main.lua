@@ -192,9 +192,9 @@ end
 function QuickApp:updateLabelForRegister(reg, value)
 	if not reg or not reg.hex then return end
 	if reg.hex == REGISTERS.status.hex then
-		self:updateLabelState("label_power", value == 1, "Power ON", "Power OFF")
+		self:updateLabelState("label_power", value == 1, "⚡ Power ON", "⭕ Power OFF")
 	elseif reg.hex == REGISTERS.season.hex then
-		self:updateLabelState("label_season", value == 1, "Winter", "Summer")
+		self:updateLabelState("label_season", value == 1, "❄️ Winter", "☀️ Summer")
 	elseif reg.hex == REGISTERS.current_mode.hex then
 		self:updateLabelMode(value)
 	elseif reg.hex == REGISTERS.speed_manual.hex then
@@ -205,14 +205,15 @@ end
 
 function QuickApp:updateLabelSpeed(state)
 	if state and state > 0 then
-		self:updateView("label_speed", "text", "Speed " .. state)
+		local speedText = (SPEED_MAP and SPEED_MAP[state]) or ("🌀 Speed " .. state)
+		self:updateView("label_speed", "text", speedText)
 	else
-		self:updateView("label_speed", "text", "Speed Unknown")
+		self:updateView("label_speed", "text", "❓ Speed Unknown")
 	end
 end
 
 
 function QuickApp:updateLabelMode(state)
-	local mode = MODE_MAP[state] or ("Unknown (" .. tostring(state) .. ")")
-	self:updateView("label_mode", "text", "Mode " .. mode)
+	local mode = MODE_MAP[state] or ("❓ Unknown (" .. tostring(state) .. ")")
+	self:updateView("label_mode", "text", mode)
 end
