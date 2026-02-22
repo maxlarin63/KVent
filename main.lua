@@ -204,12 +204,14 @@ end
 
 
 function QuickApp:updateLabelSpeed(state)
-	if state and state > 0 then
-		local speedText = (SPEED_MAP and SPEED_MAP[state]) or ("🌀 Speed " .. state)
-		self:updateView("label_speed", "text", speedText)
+	local text
+	if type(state) == "number" then
+		-- 0 = Standby (valid when power is off); 1–4 = levels
+		text = (SPEED_MAP and SPEED_MAP[state]) or (state == 0 and "💤 Standby") or ("🌀 Speed " .. state)
 	else
-		self:updateView("label_speed", "text", "❓ Speed Unknown")
+		text = "❓ Speed Unknown"
 	end
+	self:updateView("label_speed", "text", text)
 end
 
 
