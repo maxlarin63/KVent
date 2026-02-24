@@ -22,6 +22,8 @@ function KomfoBinarySwitch:turnOn()
 	if reg then
 		self.parent.modbus:queueWrite(reg, string.char(0x00, 0x01))
 		self.parent:updateLabelForRegister(reg, 1)
+		-- Update child state so scene/notification triggers (e.g. "when device turns on") fire
+		self:updateProperty("value", true)
 	end
 end
 
@@ -31,5 +33,7 @@ function KomfoBinarySwitch:turnOff()
 	if reg then
 		self.parent.modbus:queueWrite(reg, string.char(0x00, 0x00))
 		self.parent:updateLabelForRegister(reg, 0)
+		-- Update child state so scene/notification triggers (e.g. "when device turns off") fire
+		self:updateProperty("value", false)
 	end
 end

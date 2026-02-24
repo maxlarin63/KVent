@@ -157,12 +157,16 @@ function QuickApp:onAutoOnSelected()
 	self:debug("Set Auto")
 	self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x01))
 	self:updateLabelForRegister(REGISTERS.current_mode, 1)
+	-- Update child so notifications fire when using main GUI
+	self:updateChildProperty(REGISTERS.current_mode, "value", true)
 end
 
 function QuickApp:onAutoOffSelected()
 	self:debug("Set Manual")
 	self.modbus:queueWrite(REGISTERS.current_mode, string.char(0x00, 0x00))
 	self:updateLabelForRegister(REGISTERS.current_mode, 0)
+	-- Update child so notifications fire when using main GUI
+	self:updateChildProperty(REGISTERS.current_mode, "value", false)
 end
 
 

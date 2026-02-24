@@ -60,7 +60,7 @@ MODE_MAP = {
 -- Register Type Helpers
 -- ==================================================
 
--- Boolean (0 / 1)
+-- Boolean (0 / 1); updates label and child so notifications (e.g. "when Power Switch turns on") can trigger
 local function boolRegister(addr, debugName, labelId, textOn, textOff)
 	return makeRegister(addr, function(qa, reg, payload)
 		local raw   = read_unsigned_i16(payload)
@@ -70,6 +70,7 @@ local function boolRegister(addr, debugName, labelId, textOn, textOff)
 		debugTrace(qa, debugName .. ":", text, "(raw:", raw .. ")")
 
 		qa:updateLabelState(labelId, state, textOn, textOff)
+		qa:updateChildValue(reg, state)
 	end)
 end
 
@@ -173,6 +174,8 @@ REGISTERS = {
 		debugTrace(qa, "Mode:", modeText, "(raw:", raw .. ")")
 
 		qa:updateLabelMode(raw)
+		-- Update child so notifications (e.g. "when Auto Mode Switch turns on") work from poll
+		qa:updateChildValue(reg, raw == 1)
 	end),
 
 
