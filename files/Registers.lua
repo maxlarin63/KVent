@@ -146,6 +146,7 @@ REGISTERS = {
 			"⚠️ Service NOW",
 			"✅ Service OK"
 		)
+		qa:updateChildValue(reg, serviceActive)
 	end),
 
 

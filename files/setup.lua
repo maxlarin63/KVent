@@ -12,6 +12,9 @@ function setup_devices(qa)
 	-- Create Switch for Auto mode switch
 	setup_switch(qa, REGISTERS.current_mode, "Komfovent Auto Mode Switch")
 
+	-- Create Switch for Service warning (register 1007, bit 14)
+	setup_switch(qa, REGISTERS.service, "Komfovent Service Switch")
+
 	-- [[ Temp sensors ]]
 
 	-- Create Supply Temp sensor
