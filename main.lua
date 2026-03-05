@@ -13,6 +13,7 @@ function QuickApp:onInit()
 
 	self:initChildDevices({
 		["com.fibaro.binarySwitch"]        = KomfoBinarySwitch,
+		["com.fibaro.binarySensor"]        = KomfoSensor,
 		["com.fibaro.temperatureSensor"]   = KomfoSensor,
 		["com.fibaro.humiditySensor"]      = KomfoSensor,
 		["com.fibaro.powerSensor"]         = KomfoSensor,
@@ -50,9 +51,18 @@ end
 
 function QuickApp:setupDevicesMap()
 	self.devicesMap = {}
+	-- UIDs of children created this run (avoid getVariable on them to prevent "variable not found" warning).
+	local createdUidById = {}
+	for _, e in ipairs(self._createdChildUids or {}) do
+		createdUidById[e.id] = e.uid
+	end
+	self._createdChildUids = {}
 
 	for hcId, device in pairs(self.childDevices) do
-		self.devicesMap[device.uid] = hcId
+		local uid = createdUidById[device.id] or device:getVariable("registry_uid") or device.uid
+		if uid then
+			self.devicesMap[uid] = hcId
+		end
 	end
 end
 
