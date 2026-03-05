@@ -69,6 +69,23 @@ The QuickApp talks to the **PING2** at a fixed IP/port; the PING2 forwards Modbu
 
 ---
 
+## Building
+
+The `.fqa` package for this QuickApp is built with the [fqa](https://github.com/maxlarin63/fqa) tool (pack Fibaro QuickApp from a project layout).
+
+- **CI:**
+  - If you add a GitHub Actions workflow to build the `.fqa`, configure the step that checks out the fqa tool to use a tagged release (e.g. `ref: v1.0.0`) so CI uses a known tool version.
+- **Local (direct fqa):**
+  - Clone the fqa repo.
+  - From this repo run: `python /path/to/fqa/fqa.py pack .` (output: `KVent.fqa` in the current directory).
+  - To see which fqa version you are using, run `python /path/to/fqa/fqa.py --version` (or `fqa --version` if installed on PATH).
+- **Local (via `fqa-pack` from this project):**
+  - Make sure `.fqa-tool-path` points to your `fqa` command (for example: `python "D:\HomeAutomation\fqa\fqa.py"`).
+  - From this repo run:
+    - `python fqa-pack.py -y -o dist` (cross‑platform), or
+    - `fqa-pack.bat -y -o dist` on Windows.
+  - The built `.fqa` will be placed under `dist\`.
+
 ## License
 
 Use and modify as needed for your installation.
