@@ -11,3 +11,6 @@ __pycache__/
 
 # FQA tool outputs
 *.fqa
+
+# Local fqa tool path (per developer, do not commit)
+.fqa-tool-path
